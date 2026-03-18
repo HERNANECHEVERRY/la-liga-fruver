@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --font-comic: 'Bangers', cursive;
+  
+  --color-primary: #EE1D23; /* Hero Red */
+  --color-secondary: #FFD400; /* Action Yellow */
+  --color-accent: #0274BE; /* Comic Blue */
+  --color-background: #FFFFFF;
+  --color-foreground: #1A1A1A;
+  
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.5rem;
+  
+  --shadow-comic: 6px 6px 0px 0px rgba(0,0,0,1);
+  --shadow-comic-hover: 10px 10px 0px 0px rgba(0,0,0,1);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .comic-border {
+    @apply border-4 border-black;
+  }
+  
+  .comic-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  }
+  
+  .comic-shadow-hover:hover {
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+    transform: translate(-4px, -4px);
+  }
+
+  .comic-text {
+    @apply font-comic tracking-wider uppercase;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
