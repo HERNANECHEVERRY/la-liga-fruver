@@ -1,6 +1,5 @@
 'use client'
 
-import { Products } from '@/types/database' // wait, I didn't export like that
 import { Database } from '@/types/database'
 import Image from 'next/image'
 import { Plus, ShoppingCart } from 'lucide-react'
