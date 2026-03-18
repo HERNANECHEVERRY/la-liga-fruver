@@ -19,10 +19,10 @@ export function Navbar() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground group-hover:scale-105 transition-transform">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground group-hover:scale-105 transition-transform border-2 border-black rotate-[-6deg] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                 <Store className="h-6 w-6" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-gradient">HECTOR STORE</span>
+              <span className="text-xl font-black italic tracking-tighter text-primary italic" style={{ fontFamily: 'var(--font-bangers)' }}>¡SUPER FRUVER!</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-6">

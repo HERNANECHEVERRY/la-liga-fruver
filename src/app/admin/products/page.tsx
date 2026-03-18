@@ -209,7 +209,7 @@ export default function AdminProductsPage() {
             <Camera className="h-10 w-10 text-primary" />
             Gestor de Catálogo
           </h1>
-          <p className="text-muted-foreground text-lg">Administra el inventario de HECTOR STORE.</p>
+          <p className="text-muted-foreground text-lg">Administra el inventario de LA LIGA DEL FRUVER.</p>
         </div>
         <button
           onClick={() => { setEditingProduct(null); setFormData({ name: '', description: '', price: 0, stock: 0, category_id: '', image_url: '' }); setShowModal(true); }}
