@@ -88,28 +88,78 @@ export interface Database {
         Row: {
           id: string
           user_id: string | null
+          total_products_price: number
+          shipping_price: number
+          total_price: number
+          status: 'pendiente' | 'asignado' | 'enviado'
+          client_lat: number | null
+          client_lng: number | null
+          customer_name: string
+          customer_address: string
+          customer_phone: string
+          delivery_person: string | null
           order_details: string
           shipping_address: string
-          status: 'pendiente' | 'asignado' | 'enviado'
-          delivery_person: string | null
           created_at: string
         }
         Insert: {
           id?: string
           user_id?: string | null
-          order_details: string
-          shipping_address: string
+          total_products_price: number
+          shipping_price: number
+          total_price: number
           status?: 'pendiente' | 'asignado' | 'enviado'
+          client_lat: number | null
+          client_lng: number | null
+          customer_name: string
+          customer_address: string
+          customer_phone: string
           delivery_person?: string | null
+          order_details?: string
+          shipping_address?: string
           created_at?: string
         }
         Update: {
           id?: string
           user_id?: string | null
+          total_products_price?: number
+          shipping_price?: number
+          total_price?: number
+          status?: 'pendiente' | 'asignado' | 'enviado'
+          client_lat?: number | null
+          client_lng?: number | null
+          customer_name?: string
+          customer_address?: string
+          customer_phone?: string
+          delivery_person?: string | null
           order_details?: string
           shipping_address?: string
-          status?: 'pendiente' | 'asignado' | 'enviado'
-          delivery_person?: string | null
+          created_at?: string
+        }
+      }
+      order_items: {
+        Row: {
+          id: string
+          order_id: string
+          product_id: string
+          quantity: number
+          unit_price: number
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          order_id: string
+          product_id: string
+          quantity: number
+          unit_price: number
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          order_id?: string
+          product_id?: string
+          quantity?: number
+          unit_price?: number
           created_at?: string
         }
       }
